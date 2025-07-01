@@ -1,0 +1,8 @@
+﻿Task,Status
+Firebase initialized,✅ Done
+Firebase Auth added,✅ Done
+Firestore added,✅ Done
+Login form working,✅ Done
+Form submission to Firestore,✅ Done
+GitHub repo has files,❌ Not Yet
+Deployed on Firebase Hosting or Vercel,❌ Not Yet

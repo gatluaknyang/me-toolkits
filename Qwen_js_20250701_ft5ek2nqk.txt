@@ -1,0 +1,42 @@
+// src/firebase.js
+
+import { initializeApp } from "firebase/app";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { getFirestore, collection, addDoc, getDocs, query, where, doc, setDoc } from "firebase/firestore";
+
+// Firebase Config
+const firebaseConfig = {
+  apiKey: "AIzaSyDJG4vOmA-nFIonLn3G-6IRh5LvptLWulA",
+  authDomain: "me-toolkit-55039.firebaseapp.com",
+  projectId: "me-toolkit-55039",
+  storageBucket: "me-toolkit-55039.firebasestorage.app",
+  messagingSenderId: "1022663225767",
+  appId: "1:1022663225767:web:92acb33d151eafb0b54682"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Firebase Services
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Collections
+const usersCollection = collection(db, "users");
+const submissionsCollection = collection(db, "submissions");
+
+export {
+  auth,
+  db,
+  usersCollection,
+  submissionsCollection,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  addDoc,
+  getDocs,
+  query,
+  where,
+  doc,
+  setDoc
+};
